@@ -1,0 +1,96 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Mis Gastos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h2>Agregar Gastos</h2>
+  <form (ngSubmit)="saveData()">
+    <!-- nombre -->
+    <ion-item>
+      <ion-label>Nombre </ion-label>
+      <ion-input type="text" placeholder="Nombre" [(ngModel)]="data.nombre" name="nombre" requiered="">
+
+      </ion-input>
+    </ion-item>
+
+
+    <!-- apellido -->
+    <ion-item>
+      <ion-label>Apellido </ion-label>
+      <ion-input type="text" placeholder="Apellido" [(ngModel)]="data.apellido" name="apellido" requiered="">
+
+      </ion-input>
+    </ion-item>
+
+
+    <!-- lugar de trabajo -->
+    <ion-item>
+      <ion-label>Lugar de Trabajo </ion-label>
+      <ion-input type="text" placeholder="Lugar de Trabajo" [(ngModel)]="data.lugartrabajo" name="lugartrabajo" requiered="">
+
+      </ion-input>
+    </ion-item>
+    <!-- fecha de transaccion -->
+    <ion-item>
+      <ion-label>Fecha de Transaccion</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="data.fechatransaccion" name="fechatransaccion" required=""></ion-datetime>
+    </ion-item>
+
+    <!-- Cantidad -->
+
+    <ion-item>
+      <ion-label>Cantidad</ion-label>
+      <ion-input type="number" placeholder="cantidad" [(ngModel)]="data.amount" name="amount" required=""></ion-input>
+    </ion-item>
+
+    <!-- tipo -->
+
+    <ion-item>
+      <ion-label>Tipo</ion-label>
+      <ion-select [(ngModel)]="data.tipo" name="tipo" required="">
+        <ion-option value="Ingreso">Ingreso</ion-option>
+        <ion-option value="Gasto">Gasto</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- descripcion -->
+
+    <ion-item>
+      <ion-label>Descripcion </ion-label>
+      <ion-input type="text" placeholder="Descripcion" [(ngModel)]="data.descripcion" name="descripcion" requiered="">
+
+      </ion-input>
+    </ion-item>
+
+    <!-- Email -->
+
+    <ion-item>
+      <ion-label>Email </ion-label>
+      <ion-input type="text" placeholder="email" [(ngModel)]="data.email" name="email">
+
+      </ion-input>
+    </ion-item>
+
+    <!-- Telefono -->
+
+    <ion-item>
+      <ion-label>Telefono </ion-label>
+      <ion-input type="text" placeholder="telefono" [(ngModel)]="data.telefono" name="telefono">
+
+      </ion-input>
+    </ion-item>
+
+    <ion-input type="hidde" [(ngModel)]="data.idpersona" name="idpersona"></ion-input>
+    <button ion-button type="submit" block> Actualizar</button>
+
+
+  </form>
+
+
+</ion-content>
